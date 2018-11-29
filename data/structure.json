@@ -3,11 +3,11 @@
     "id":
     {
       "title": "text",
-      "article": "text",
       "url":"reddit.com",
       "upvotes":"1",
       "num_comments":"1",
-      "op":"user"
+      "op":"user",
+      "article": "text",
     }
   }
 }
