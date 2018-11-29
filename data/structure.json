@@ -1,0 +1,22 @@
+{"articles":
+  {
+    "id":
+    {
+      "title": "text",
+      "article": "text",
+      "url":"reddit.com",
+      "upvotes":"1",
+      "num_comments":"1",
+      "op":"user"
+    }
+  }
+}
+
+{"tags":
+  {
+    "id":
+    {
+      "tags":["s1", "s2", "s3"]
+    }
+  }
+}
