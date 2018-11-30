@@ -1,30 +1,40 @@
+import string
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
 import json
 frequency_dict = {}
 max_freq = 0
 
-def most_freq_20_patterns(sequences, minlen=2, minsup=2, maxlen=5):
+def most_freq_20_patterns(sequences, id, output_dict, minsup=2, maxlen=5):
     global max_freq
     global frequency_dict
 
-    #minlen=1
     patterns = generate_patterns(sequences, minsup, maxlen)
 
     #collect long enough patterns and their support
-    top20 = []
+    n = 10
+    top_n = []
     flag = False
     for frequency in range(max_freq ,1,-1):
         if frequency in frequency_dict:
             for element in sorted(frequency_dict[frequency]):
-                top20.append((frequency, element))
-                if len(top20) >= 20:
+                top_n.append((frequency, element))
+                if len(top_n) >= n:
                     flag = True
                     break
         if flag:
             break
 
     #print results in correct format
-    for pattern in top20:
-        print('[%i, \'%s\']' % (pattern[0], pattern[1]))
+    output_dict[id] = {}
+    p = []
+    for pattern in top_n:
+    #     print('[%i, \'%s\']' % (pattern[0], pattern[1]))
+    # print()
+        p.append(pattern[1])
+    output_dict[id]["tags"] = p
+    # print(output_dict[id]["tags"])
 
 
 #generate list of all patterns with given constraints
@@ -32,6 +42,7 @@ def most_freq_20_patterns(sequences, minlen=2, minsup=2, maxlen=5):
 def generate_patterns(sequences, minsup, maxlen):
     global max_freq
     global frequency_dict
+    # print(sequences[0])
 
     patterns = {}
     freq_one_itemset = {}
@@ -117,10 +128,24 @@ if __name__ == "__main__":
     with open("data/input.json", "r") as f:
         contents = f.read()
         article_dict = json.loads(contents)
-
-    print(article_dict)
+    stop_words = set(stopwords.words('english'))
     output_dict = {}
     for id in article_dict.keys():
+        frequency_dict = {}
+        max_freq = 0
         raw_text = article_dict[id]["article"]
+
         corpus = raw_text.split(".")
-        most_freq_20_patterns(corpus)
+        preprocessed_corpus = []
+        for sent in corpus:
+            sent = sent.strip()
+            words = sent.split(" ")
+            for word in words:
+                if word in stop_words:
+                    words.remove(word)
+            sent = " ".join(words)
+            preprocessed_corpus.append(sent)
+        most_freq_20_patterns(preprocessed_corpus, id, output_dict, minsup=4, maxlen=4)
+
+    with open("data/tags_apriori.json", "w") as f:
+        json.dump(output_dict, f, indent=4)
