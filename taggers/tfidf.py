@@ -8,7 +8,7 @@ def main():
         contents = f.read()
         article_dict = json.loads(contents)
 
-    print(article_dict)
+    # print(article_dict)
     output_dict = {}
     for id in article_dict.keys():
         raw_text = article_dict[id]["article"]
@@ -23,8 +23,8 @@ def main():
         top_n = feature_names[tfidf_sorting][:n]
         output_dict[id] = {}
         output_dict[id]["tags"] = list(top_n)
-        print(type(top_n))
-        print(top_n)
+        # print(type(top_n))
+        # print(top_n)
 
     with open("data/tags_tfidf.json", "w") as f:
         json.dump(output_dict, f, indent=4)
