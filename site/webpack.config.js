@@ -74,7 +74,7 @@ const config = {
         contentBase: BUILD_DIR,
         historyApiFallback: true,
         host: "localhost",
-        port: 8080,
+        port: 8080
     }
 };
 
