@@ -3,18 +3,29 @@ import { Segment, Grid, Divider, Label, Card, Item, Button, Image, Checkbox } fr
 import { Link } from 'react-router-dom'
 
 import styles from './Tag.scss'
-import tagData from '../../../../data/tags_tfidf.json';
-import postData from '../../../../data/input.json';
+import tagData from '../../assets/tags_tfidf.json';
+import postData from '../../assets/input.json';
+import Api from '../../Api.js';
+const api = new Api();
+
 
 class Tag extends Component {
 
-    temp(data) {
+    componentDidMount() {
+        api.tag()
+    }
+
+    list_of_labels(data) {
         let labels = []
         for(var i = 1; i < data.length; i++)
         {
             labels.push(<Label key={i}>{data[i]}</Label>)
         }
         return labels
+    }
+
+    handleShare(e, data, index) {
+        api.share({'id': index, 'checked': data.checked})
     }
 
     render() {
@@ -27,14 +38,14 @@ class Tag extends Component {
             items.push(
                 <Segment.Group horizontal key={i}>
                     <Segment>
-                        <Checkbox label='Share' />
+                        <Checkbox label='Share' onClick={(e,data) => this.handleShare(e, data, index)}/>
                         <Label className='upvotes'> {postData[index]["upvotes"]} &#11014;</Label>
                     </Segment>
                     <Segment>
-                        <a href={postData[index]["url"]} target="_blank">
+                        <a href={postData[index]["url"]} target="_blank" onClick={() => api.link({'id': index})}>
                             <Card.Description>
                                 <Label.Group>
-                                    {this.temp(tagData[index]["tags"])}
+                                    {this.list_of_labels(tagData[index]["tags"])}
                                 </Label.Group>
                             </Card.Description>
                         </a>
