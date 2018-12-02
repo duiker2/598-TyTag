@@ -12,6 +12,10 @@ const config = {
 
     mode: "development",
 
+    node: {
+        fs: "empty"
+    },
+
     entry: {
         app: [APP_DIR + "/index.jsx"],
         vendor: ["react", "react-dom", "react-router", "react-router-dom"]
