@@ -25,21 +25,21 @@ class Tag extends Component {
         {
             let index = i.toString();
             items.push(
-                    <Segment.Group horizontal key={i}>
-                        <Segment>
-                            <Checkbox label='Share' />
-                            <Label className='upvotes'> {postData[index]["upvotes"]} &#11014;</Label>
-                        </Segment>
-                        <Segment>
-                            <a href={postData[index]["url"]} target="_blank">
-                                <Card.Description>
-                                    <Label.Group>
-                                        {this.temp(tagData[index]["tags"])}
-                                    </Label.Group>
-                                </Card.Description>
-                            </a>
-                        </Segment>
-                      </Segment.Group>
+                <Segment.Group horizontal key={i}>
+                    <Segment>
+                        <Checkbox label='Share' />
+                        <Label className='upvotes'> {postData[index]["upvotes"]} &#11014;</Label>
+                    </Segment>
+                    <Segment>
+                        <a href={postData[index]["url"]} target="_blank">
+                            <Card.Description>
+                                <Label.Group>
+                                    {this.temp(tagData[index]["tags"])}
+                                </Label.Group>
+                            </Card.Description>
+                        </a>
+                    </Segment>
+                  </Segment.Group>
             )
         }
 
@@ -47,7 +47,7 @@ class Tag extends Component {
             <div className="Tag">
                 <div className="container">
                     <h1> r/News </h1>
-                    <Card.Group>{items}</Card.Group>
+                    <Card.Group stackable>{items}</Card.Group>
                 </div>
             </div>
         )
