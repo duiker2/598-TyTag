@@ -3,8 +3,8 @@ import { Segment, Grid, Divider, Label, Card, Item, Button, Image, Checkbox } fr
 import { Link } from 'react-router-dom'
 
 import styles from './Tag.scss'
-import tagData from '../../assets/tags_tfidf.json';
-import postData from '../../assets/input.json';
+import tagData from '../../../../../data/tags_tfidf.json';
+import postData from '../../../../../data/input.json';
 import Api from '../../Api.js';
 const api = new Api();
 

@@ -22,6 +22,7 @@ class Api {
         });
     }
 
+
     link(article_id) {
         axios.post('/link/', article_id)
         .catch(error => {

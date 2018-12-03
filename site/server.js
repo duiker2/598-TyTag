@@ -21,25 +21,25 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 app.post('/tag', function(req, res) {
-    console.log('tag site accessed');
+    console.log('tag site accessed', Date.now());
     res.sendStatus(200)
 });
 
 app.post('/title', function(req, res) {
-    console.log('title site accessed');
+    console.log('title site accessed', Date.now());
     res.sendStatus(200)
 });
 
 app.post('/share', function(req, res) {
-    console.log('share: ' + req.body.id + ', checked: ' + req.body.checked);
+    console.log('share: ' + req.body.id + ', checked: ' + req.body.checked, Date.now());
     res.sendStatus(200)
 });
 
 app.post('/link', function(req, res) {
-    console.log('link: ' + req.body.id);
+    console.log('link: ' + req.body.id, Date.now());
     res.sendStatus(200)
 });
 
 // Start the server
 app.listen(port);
-console.log('Server running on port ' + port);
+console.log('Server running on port ' + port, Date.now());
