@@ -1,3 +1,17 @@
 .Title {
-    margin-top: 50px; 
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        width: 1000px;
+    }
+}
+
+.upvotes {
+    margin-left: 10px !important;
+}
+
+.ShareSeg{
+    width:200px !important;
 }
