@@ -11,6 +11,13 @@ const api = new Api();
 
 class Tag extends Component {
 
+    constructor() {
+        super()
+        this.state = {
+            share_enabled: new Array(25).fill(true)
+        }
+    }
+
     componentDidMount() {
         api.tag()
     }
@@ -25,7 +32,11 @@ class Tag extends Component {
     }
 
     handleShare(e, data, index) {
-        api.share({'id': index, 'checked': data.checked})
+        api.share({'id': index})
+        let i = parseInt(index)
+        let a = this.state.share_enabled.slice();
+        a[i-1] = false
+        this.setState({ share_enabled: a})
     }
 
     render() {
@@ -38,7 +49,7 @@ class Tag extends Component {
             items.push(
                 <Segment.Group horizontal key={i}>
                     <Segment>
-                        <Checkbox label='Share' onClick={(e,data) => this.handleShare(e, data, index)}/>
+                        <Checkbox label='Share' disabled={!this.state.share_enabled[i-1]} onClick={(e,data) => this.handleShare(e, data, index)}/>
                         <Label className='upvotes'> {postData[index]["upvotes"]} &#11014;</Label>
                     </Segment>
                     <Segment>
@@ -58,7 +69,7 @@ class Tag extends Component {
             <div className="Tag">
                 <div className="container">
                     <h1> r/News </h1>
-                    <Card.Group stackable>{items}</Card.Group>
+                    <Card.Group itemsPerRow={1}>{items}</Card.Group>
                 </div>
             </div>
         )
