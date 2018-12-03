@@ -1,0 +1,16 @@
+start server
+	script logX.txt
+	npm start
+run ngrok server port 5000
+	ngrok http 5000
+change api url to be ngrok server url
+start frontend
+	npm run dev
+run ngrok frontend
+	ngrok http 8080 -host-header="localhost:8080"
+give participant frontend url
+
+go to server terminal and save log
+	ctrl+C
+	exit
+move log file somewhere
