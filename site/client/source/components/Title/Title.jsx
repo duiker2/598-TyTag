@@ -13,7 +13,9 @@ class Title extends Component {
     constructor() {
         super()
         this.state = {
-            share_enabled: new Array(25).fill(true)
+            share_enabled: new Array(25).fill(true),
+            upvote_inverted: new Array(25).fill(true),
+            downvote_inverted: new Array(25).fill(true)
         }
     }
 
@@ -29,6 +31,28 @@ class Title extends Component {
         this.setState({ share_enabled: a})
     }
 
+    handleUpvote(index) {
+        api.upvote({'id': index})
+        let i = parseInt(index)
+        let a = this.state.downvote_inverted.slice();
+        a[i-1] = true
+        this.setState({ downvote_inverted: a})
+        let b = this.state.upvote_inverted.slice();
+        b[i-1] = false
+        this.setState({ upvote_inverted: b})
+    }
+
+    handleDownvote(index) {
+        api.downvote({'id': index})
+        let i = parseInt(index)
+        let a = this.state.upvote_inverted.slice();
+        a[i-1] = true
+        this.setState({ upvote_inverted: a})
+        let b = this.state.downvote_inverted.slice();
+        b[i-1] = false
+        this.setState({ downvote_inverted: b})
+    }
+
     render() {
         var data;
         // const loadData = () => JSON.parse(JSON.stringify(jsonData)); //uncomment to get a non-cached one
@@ -39,14 +63,24 @@ class Title extends Component {
             items.push(
                 <Grid celled key={i}>
                     <Grid.Row>
-                        <Grid.Column width={3}>
-                            <Checkbox label='Share' disabled={!this.state.share_enabled[i-1]} onClick={(e,data) => this.handleShare(e, data, index)}/>
-                                <Label className='upvotes'> {postData[index]["upvotes"]} &#11014;</Label>
+                        <Grid.Column width={4}>
+                            <div className="share_up">
+                                <Checkbox label='Share' className="sharebox" disabled={!this.state.share_enabled[i-1]} onClick={(e,data) => this.handleShare(e, data, index)}/>
+                                <Button as='div' labelPosition='left'>
+                                    <Label as='a' basic>
+                                        {postData[index]["upvotes"]}
+                                    </Label>
+                                    <Button.Group>
+                                        <Button className="vote_button" color="green" onClick={() => this.handleUpvote(index)} inverted={this.state.upvote_inverted[i-1]}>&#11014;</Button>
+                                        <Button className="vote_button" color="red" onClick={() => this.handleDownvote(index)} inverted={this.state.downvote_inverted[i-1]}>&#11015;</Button>
+                                    </Button.Group>
+                                </Button>
+                            </div>
                         </Grid.Column>
-                        <Grid.Column width={13}>
+                        <Grid.Column width={12}>
                             <Card.Description>
                                 <a href={postData[index]["url"]} target="_blank" onClick={() => api.link({'id': index})}>
-                                    <Button size="tiny">Read Article</Button>
+                                    <Button size="tiny" primary>Read Article</Button>
                                 </a>
                                 {"   " + postData[index]["title"]}
                             </Card.Description>

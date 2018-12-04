@@ -8,10 +8,20 @@
     }
 }
 
-.upvotes {
-    margin-left: 10px !important;
+.upvotes{
+    width: 60px;
+    margin-right:0px;
+    margin-left: 20px !important;
 }
 
-.ShareSeg{
-    width:200px !important;
+.share_up{
+    display:flex;
+    flex-direction:row;
+}
+.sharebox{
+    margin-right:35px;
+    margin-top: 6px;
+}
+.vote_button{
+    padding: 8px !important;
 }
