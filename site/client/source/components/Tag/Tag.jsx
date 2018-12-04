@@ -3,7 +3,7 @@ import { Segment, Grid, Divider, Label, Card, Item, Button, Image, Checkbox } fr
 import { Link } from 'react-router-dom'
 
 import styles from './Tag.scss'
-import tagData from '../../../../../data/tags_tfidf.json';
+import tagData from '../../../../../data/tags_manual.json';
 import postData from '../../../../../data/input.json';
 import Api from '../../Api.js';
 const api = new Api();
@@ -22,15 +22,6 @@ class Tag extends Component {
         api.tag()
     }
 
-    list_of_labels(data) {
-        let labels = []
-        for(var i = 1; i < data.length; i++)
-        {
-            labels.push(<Label key={i}>{data[i]}</Label>)
-        }
-        return labels
-    }
-
     handleShare(e, data, index) {
         api.share({'id': index})
         let i = parseInt(index)
@@ -47,20 +38,19 @@ class Tag extends Component {
         {
             let index = i.toString();
             items.push(
-                <Grid celled>
+                <Grid celled key={i}>
                     <Grid.Row>
                         <Grid.Column width={3}>
                             <Checkbox label='Share' disabled={!this.state.share_enabled[i-1]} onClick={(e,data) => this.handleShare(e, data, index)}/>
                                 <Label className='upvotes'> {postData[index]["upvotes"]} &#11014;</Label>
                         </Grid.Column>
                         <Grid.Column width={13}>
-                            <a href={postData[index]["url"]} target="_blank" onClick={() => api.link({'id': index})}>
                                 <Card.Description>
-                                    <Label.Group>
-                                        {this.list_of_labels(tagData[index]["tags"])}
-                                    </Label.Group>
+                                    <a href={postData[index]["url"]} target="_blank" onClick={() => api.link({'id': index})}>
+                                        <Button size="tiny">Read Article</Button>
+                                    </a>
+                                    {"   " + (tagData[index]["tags"]).join(', ')}
                                 </Card.Description>
-                            </a>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>

@@ -37,20 +37,19 @@ class Title extends Component {
         {
             let index = i.toString();
             items.push(
-                <Grid celled>
+                <Grid celled key={i}>
                     <Grid.Row>
                         <Grid.Column width={3}>
                             <Checkbox label='Share' disabled={!this.state.share_enabled[i-1]} onClick={(e,data) => this.handleShare(e, data, index)}/>
                                 <Label className='upvotes'> {postData[index]["upvotes"]} &#11014;</Label>
                         </Grid.Column>
                         <Grid.Column width={13}>
-                            <a href={postData[index]["url"]} target="_blank" onClick={() => api.link({'id': index})}>
-                                <Card.Description>
-                                    <Label.Group>
-                                        {postData[index]["title"]}
-                                    </Label.Group>
-                                </Card.Description>
-                            </a>
+                            <Card.Description>
+                                <a href={postData[index]["url"]} target="_blank" onClick={() => api.link({'id': index})}>
+                                    <Button size="tiny">Read Article</Button>
+                                </a>
+                                {"   " + postData[index]["title"]}
+                            </Card.Description>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
