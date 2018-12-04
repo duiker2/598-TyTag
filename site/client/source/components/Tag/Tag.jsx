@@ -49,11 +49,21 @@ class Tag extends Component {
             items.push(
                 <Grid key={i} celled>
                     <Grid.Row>
-                        <Grid.Column width={3}>
-                            <Checkbox label='Share' disabled={!this.state.share_enabled[i-1]} onClick={(e,data) => this.handleShare(e, data, index)}/>
-                                <Label className='upvotes'> {postData[index]["upvotes"]} &#11014;</Label>
+                        <Grid.Column width={4}>
+                            <div className="share_up">
+                                <Checkbox label='Share' className="sharebox" disabled={!this.state.share_enabled[i-1]} onClick={(e,data) => this.handleShare(e, data, index)}/>
+                                <Button as='div' labelPosition='left'>
+                                    <Label as='a' basic>
+                                        {postData[index]["upvotes"]}
+                                    </Label>
+                                    <Button.Group>
+                                        <Button className="vote_button" color="green" >&#11014;</Button>
+                                        <Button className="vote_button" color="red">&#11015;</Button>
+                                    </Button.Group>
+                                </Button>
+                            </div>
                         </Grid.Column>
-                        <Grid.Column width={13}>
+                        <Grid.Column width={12}>
                             <Card.Description>
                                 <Label.Group>
                                     <a href={postData[index]["url"]} target="_blank" onClick={() => api.link({'id': index})}>
