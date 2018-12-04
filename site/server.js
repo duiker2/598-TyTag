@@ -40,6 +40,16 @@ app.post('/link', function(req, res) {
     res.sendStatus(200)
 });
 
+app.post('/upvote', function(req, res) {
+    console.log('upvote: ' + req.body.id, Date.now());
+    res.sendStatus(200)
+});
+
+app.post('/downvote', function(req, res) {
+    console.log('downvote: ' + req.body.id, Date.now());
+    res.sendStatus(200)
+});
+
 // Start the server
 app.listen(port);
 console.log('Server running on port ' + port, Date.now());

@@ -30,8 +30,22 @@ class Api {
         });
     }
 
-    share(article_id, checked) {
-        axios.post('/share/', article_id, checked)
+    share(article_id) {
+        axios.post('/share/', article_id)
+        .catch(error => {
+            console.log(error);
+        });
+    }
+
+    upvote(article_id) {
+        axios.post('/upvote/', article_id)
+        .catch(error => {
+            console.log(error);
+        });
+    }
+
+    downvote(article_id) {
+        axios.post('/downvote/', article_id)
         .catch(error => {
             console.log(error);
         });

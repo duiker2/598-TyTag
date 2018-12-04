@@ -14,7 +14,9 @@ class Tag extends Component {
     constructor() {
         super()
         this.state = {
-            share_enabled: new Array(25).fill(true)
+            share_enabled: new Array(25).fill(true),
+            upvote_inverted: new Array(25).fill(true),
+            downvote_inverted: new Array(25).fill(true)
         }
     }
 
@@ -39,6 +41,28 @@ class Tag extends Component {
         this.setState({ share_enabled: a})
     }
 
+    handleUpvote(index) {
+        api.upvote({'id': index})
+        let i = parseInt(index)
+        let a = this.state.downvote_inverted.slice();
+        a[i-1] = true
+        this.setState({ downvote_inverted: a})
+        let b = this.state.upvote_inverted.slice();
+        b[i-1] = false
+        this.setState({ upvote_inverted: b})
+    }
+
+    handleDownvote(index) {
+        api.downvote({'id': index})
+        let i = parseInt(index)
+        let a = this.state.upvote_inverted.slice();
+        a[i-1] = true
+        this.setState({ upvote_inverted: a})
+        let b = this.state.downvote_inverted.slice();
+        b[i-1] = false
+        this.setState({ downvote_inverted: b})
+    }
+
     render() {
         var data;
         // const loadData = () => JSON.parse(JSON.stringify(jsonData)); //uncomment to get a non-cached one
@@ -57,8 +81,8 @@ class Tag extends Component {
                                         {postData[index]["upvotes"]}
                                     </Label>
                                     <Button.Group>
-                                        <Button className="vote_button" color="green" >&#11014;</Button>
-                                        <Button className="vote_button" color="red">&#11015;</Button>
+                                        <Button className="vote_button" color="green" onClick={() => this.handleUpvote(index)} inverted={this.state.upvote_inverted[i-1]}>&#11014;</Button>
+                                        <Button className="vote_button" color="red" onClick={() => this.handleDownvote(index)} inverted={this.state.downvote_inverted[i-1]}>&#11015;</Button>
                                     </Button.Group>
                                 </Button>
                             </div>
