@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Segment, Grid, Divider, Label, Card, Item, Button, Image, Checkbox } from 'semantic-ui-react'
+import { Segment, Grid, Divider, Label, Card, Item, Button, Image, Dropdown } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 import styles from './Title.scss'
@@ -24,11 +24,7 @@ class Title extends Component {
     }
 
     handleShare(e, data, index) {
-        api.share({'id': index})
-        let i = parseInt(index)
-        let a = this.state.share_enabled.slice();
-        a[i-1] = false
-        this.setState({ share_enabled: a})
+        api.share({'id': index}, {'selection' : data['value']})
     }
 
     handleUpvote(index) {
@@ -56,6 +52,24 @@ class Title extends Component {
     render() {
         var data;
         // const loadData = () => JSON.parse(JSON.stringify(jsonData)); //uncomment to get a non-cached one
+        let share_options = [
+            {
+                text: "Social Media",
+                value: "Social Media"
+            },
+            {
+                text: "SMS",
+                value: "SMS"
+            },
+            {
+                text: "Email",
+                value: "Email"
+            },
+            {
+                text: "In Person",
+                value: "In Person"
+            }
+        ]
         let items = [];
         for(var i = 1; i < 26; i++)
         {
@@ -63,9 +77,9 @@ class Title extends Component {
             items.push(
                 <Grid celled key={i}>
                     <Grid.Row>
-                        <Grid.Column width={4}>
+                        <Grid.Column width={5}>
                             <div className="share_up">
-                                <Checkbox label='Share' className="sharebox" disabled={!this.state.share_enabled[i-1]} onClick={(e,data) => this.handleShare(e, data, index)}/>
+                                <Dropdown fluid placeholder='Share' className="sharebox" selection options = {share_options} onChange={(e,data) => this.handleShare(e, data, index)}/>
                                 <Button as='div' labelPosition='left'>
                                     <Label as='a' basic>
                                         {postData[index]["upvotes"]}
@@ -77,10 +91,10 @@ class Title extends Component {
                                 </Button>
                             </div>
                         </Grid.Column>
-                        <Grid.Column width={12}>
-                            <Card.Description>
+                        <Grid.Column width={11}>
+                            <Card.Description className='card-descrip'>
                                 <a href={postData[index]["url"]} target="_blank" onClick={() => api.link({'id': index})}>
-                                    <Button size="tiny" primary>Read Article</Button>
+                                    <Button className='card-descrip-button' size="tiny" primary>Read Article</Button>
                                 </a>
                                 {"   " + postData[index]["title"]}
                             </Card.Description>

@@ -31,7 +31,7 @@ app.post('/title', function(req, res) {
 });
 
 app.post('/share', function(req, res) {
-    console.log('share: ' + req.body.id, Date.now());
+    console.log('share: ' + req.body.article_id.id, 'selection: ' + req.body.selection.selection, Date.now());
     res.sendStatus(200)
 });
 

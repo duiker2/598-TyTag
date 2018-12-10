@@ -30,8 +30,8 @@ class Api {
         });
     }
 
-    share(article_id) {
-        axios.post('/share/', article_id)
+    share(article_id, selection) {
+        axios.post('/share/', {article_id, selection})
         .catch(error => {
             console.log(error);
         });

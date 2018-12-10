@@ -25,3 +25,13 @@
 .vote_button{
     padding: 8px !important;
 }
+
+.card-descrip {
+    display: inline-flex;
+    a {
+        .card-descrip-button {
+            width: 110px;
+        }
+        margin-right: 10px;
+    }
+}
