@@ -1,10 +1,10 @@
-start server
+start server in /site
 	script logX.txt
 	npm start
 run ngrok server port 5000
 	ngrok http 5000
 change api url to be ngrok server url
-start frontend
+start frontend in /site/client
 	npm run dev
 run ngrok frontend
 	ngrok http 8080 -host-header="localhost:8080"
