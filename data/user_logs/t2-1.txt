@@ -1,0 +1,31 @@
+Script started on Wed Dec 12 00:18:21 2018
+[?1034hShekar:site $ exitnpm start
+
+> tytag-server@1.0.0 start /Users/Shekar/UIUC/CS 598 - Social Spaces/598-Title-Replacer/site
+> node server.js
+
+Server running on port 5000 1544595503652
+title site accessed 1544595623619
+share: 1 selection: Social Media 1544595630692
+upvote: 1 1544595665141
+link: 1 1544595666732
+share: 1 selection: Email 1544595676930
+upvote: 2 1544595698168
+share: 5 selection: SMS 1544595711462
+share: 2 selection: SMS 1544595717691
+share: 7 selection: SMS 1544595728212
+share: 8 selection: Social Media 1544595733045
+upvote: 8 1544595733253
+upvote: 9 1544595738105
+upvote: 13 1544595749105
+link: 20 1544595775588
+upvote: 21 1544595786471
+upvote: 23 1544595791208
+link: 25 1544595794710
+link: 24 1544595800504
+link: 25 1544595808085
+^C
+Shekar:site $ exit
+exit
+
+Script done on Wed Dec 12 00:25:28 2018
