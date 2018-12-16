@@ -21,12 +21,14 @@ Tags will be in /data/tags_apriori.json
 
 # Website and server
 The server reads information on what the user clicks on our site.
+
 In /site
 ```
 npm start
 ```
 
-To star the website
+To start the website
+
 In /site/client
 ```
 npm run dev
