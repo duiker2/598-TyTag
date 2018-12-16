@@ -1,0 +1,43 @@
+Script started on Wed Dec 12 20:52:01 2018
+[?1034hShekar:site $ exitnpm run devls[Kcd site/client/script t2-2.txtls[Kcd site/[4Pexitnpm startpython3 Projects/BingRewardsBot/main.py    [C[C[C[C[C[C[C[C[C[C[C[C[C[Cnpm start[K
+
+> tytag-server@1.0.0 start /Users/Shekar/UIUC/CS 598 - Social Spaces/598-Title-Replacer/site
+> node server.js
+
+Server running on port 5000 1544669528557
+title site accessed 1544669643008
+share: 1 selection: Social Media 1544669694825
+link: 1 1544669702659
+downvote: 1 1544669712574
+upvote: 1 1544669713749
+downvote: 1 1544669714560
+downvote: 1 1544669715833
+downvote: 2 1544669717288
+downvote: 1 1544669718627
+link: 2 1544669723304
+downvote: 2 1544669736294
+downvote: 1 1544669740277
+downvote: 1 1544669742342
+upvote: 2 1544669745621
+downvote: 2 1544669746259
+downvote: 2 1544669746771
+downvote: 2 1544669747738
+downvote: 1 1544669748823
+downvote: 3 1544669750575
+downvote: 3 1544669751696
+upvote: 4 1544669752527
+upvote: 4 1544669753517
+share: 4 selection: Social Media 1544669758095
+upvote: 4 1544669813657
+downvote: 3 1544669814779
+downvote: 2 1544669815734
+downvote: 1 1544669816623
+upvote: 3 1544669819069
+downvote: 3 1544669819969
+downvote: 3 1544669821265
+share: 3 selection: Social Media 1544669900985
+^C
+Shekar:site $ npm start[5Pexit
+exit
+
+Script done on Wed Dec 12 20:58:35 2018

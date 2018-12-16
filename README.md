@@ -4,7 +4,7 @@ Wyatt Duiker
 
 Shekar Brahma
 
-dataset is front page of r/news, may add other front page articles
+Dataset is front page of r/news, collected on 11/29
 
 demographic questions,
 how often do you use feed based social media?
