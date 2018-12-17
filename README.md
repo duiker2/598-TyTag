@@ -4,12 +4,33 @@ Wyatt Duiker
 
 Shekar Brahma
 
-dataset is front page of r/news, may add other front page articles
+Data was collected from the front page of r/news on 11/29
 
-demographic questions,
-how often do you use feed based social media?
+# Tag generation
+To generate tags with TF-IDF run:
+```
+python taggers/tfidf.py
+```
+Tags will be in /data/tags_tfidf.json
 
-the share button is for if they will share it with anyone they know, friends, family, etc
+To generate tags with Apriori run:
+```
+python taggers/apriori.py
+```
+Tags will be in /data/tags_apriori.json
 
-how will you choose the terms that will replace the titles?
-we will test several methods, tf-idf and apriori are two we are planning to use, but we may introduce others
+# Website and server
+The server reads information on what the user clicks on our site.
+
+In /site
+```
+npm start
+```
+
+To start the website
+
+In /site/client
+```
+npm run dev
+```
+then go to localhost:8080 in a web browser
