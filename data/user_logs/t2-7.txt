@@ -1,0 +1,26 @@
+Script started on Mon Dec 17 15:48:01 2018
+[?1034hShekar:site $ ews[1Plsbashpython3 Projects/BingRewardsBot/main.py    [C[C[C[C[C[C[C[C[C[C[C[C[C[Cbash[K[2Plsews[Kews[1Plsews[Knpm start
+
+> tytag-server@1.0.0 start /Users/Shekar/UIUC/CS 598 - Social Spaces/598-Title-Replacer/site
+> node server.js
+
+Server running on port 5000 1545083289465
+title site accessed 1545083495206
+link: 1 1545083555070
+link: 4 1545083739351
+upvote: 6 1545083766369
+share: 6 selection: Social Media 1545083771077
+link: 7 1545083777572
+link: 9 1545083860499
+link: 16 1545083929876
+share: 16 selection: Social Media 1545084014955
+link: 17 1545084020485
+link: 19 1545084046550
+upvote: 19 1545084095522
+link: 25 1545084119970
+share: 25 selection: Email 1545084165674
+^C
+Shekar:site $ exit
+exit
+
+Script done on Mon Dec 17 16:03:16 2018
