@@ -1,0 +1,37 @@
+Script started on Mon Dec 17 19:06:22 2018
+[?1034hShekar:site $ lscd [1Pls[Knpm start
+
+> tytag-server@1.0.0 start /Users/Shekar/UIUC/CS 598 - Social Spaces/598-Title-Replacer/site
+> node server.js
+
+Server running on port 5000 1545095186952
+title site accessed 1545095252356
+upvote: 1 1545095294192
+share: 1 selection: SMS 1545095298183
+downvote: 2 1545095301825
+upvote: 3 1545095308928
+share: 3 selection: In Person 1545095312188
+upvote: 4 1545095317876
+link: 4 1545095320696
+downvote: 6 1545095359156
+share: 7 selection: In Person 1545095375394
+upvote: 7 1545095376384
+downvote: 9 1545095385594
+share: 9 selection: SMS 1545095388086
+upvote: 13 1545095399445
+share: 13 selection: In Person 1545095405250
+downvote: 14 1545095414375
+upvote: 17 1545095419304
+share: 22 selection: In Person 1545095430655
+downvote: 22 1545095432067
+upvote: 18 1545095443491
+share: 18 selection: In Person 1545095447540
+upvote: 25 1545095460167
+share: 25 selection: SMS 1545095463775
+share: 4 selection: In Person 1545095472924
+share: 6 selection: In Person 1545095483044
+^C
+Shekar:site $ exit
+exit
+
+Script done on Mon Dec 17 19:11:37 2018
