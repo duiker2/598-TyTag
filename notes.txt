@@ -14,3 +14,12 @@ go to server terminal and save log
 	ctrl+C
 	exit
 move log file somewhere
+
+Gabe - done
+Dhruv - done
+Eric - done
+Sam - done
+Nick - done
+Ben - done
+dad - done
+Rachel -

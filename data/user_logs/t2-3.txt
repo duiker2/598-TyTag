@@ -1,9 +1,3 @@
-Script started on Wed Dec 12 20:52:01 2018
-[?1034hShekar:site $ exitnpm run devls[Kcd site/client/script t2-2.txtls[Kcd site/[4Pexitnpm startpython3 Projects/BingRewardsBot/main.py    [C[C[C[C[C[C[C[C[C[C[C[C[C[Cnpm start[K
-
-> tytag-server@1.0.0 start /Users/Shekar/UIUC/CS 598 - Social Spaces/598-Title-Replacer/site
-> node server.js
-
 Server running on port 5000 1544669528557
 title site accessed 1544669643008
 share: 1 selection: Social Media 1544669694825
@@ -36,8 +30,3 @@ upvote: 3 1544669819069
 downvote: 3 1544669819969
 downvote: 3 1544669821265
 share: 3 selection: Social Media 1544669900985
-^C
-Shekar:site $ npm start[5Pexit
-exit
-
-Script done on Wed Dec 12 20:58:35 2018

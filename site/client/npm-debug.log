@@ -1,0 +1,36 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'dev' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.3
+4 verbose run-script [ 'predev', 'dev', 'postdev' ]
+5 info lifecycle TyTag@1.0.0~predev: TyTag@1.0.0
+6 silly lifecycle TyTag@1.0.0~predev: no script for predev, continuing
+7 info lifecycle TyTag@1.0.0~dev: TyTag@1.0.0
+8 verbose lifecycle TyTag@1.0.0~dev: unsafe-perm in lifecycle true
+9 verbose lifecycle TyTag@1.0.0~dev: PATH: C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Users\Wyatt\Documents\UIUC\FA18\SS\project\598-Title-Replacer\site\client\node_modules\.bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\libnvvp;;C:\OCaml\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Users\Wyatt\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\doxygen\bin;C:\Users\Wyatt\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\Wyatt\AppData\Local\Programs\Python\Python36-32\Scripts;C:\Users\Wyatt\AppData\Local\Programs\Python\Python36-32\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Users\Wyatt\AppData\Local\Programs\Python\Python36-32\Lib\site-packages\pysvn\Source;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\AMI\DuOS\;C:\Program Files\nodejs\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\PuTTY\;C:\Users\Wyatt\AppData\Roaming\Python\Python36\Scripts;C:\Users\Wyatt\AppData\Roaming\Python\Python36\site-packages;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%SYSTEMROOT%\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\Wyatt\Anaconda3;C:\Users\Wyatt\Anaconda3\Scripts;C:\Users\Wyatt\Anaconda3\Library\bin;C:\Users\Wyatt\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files (x86)\Nmap;C:\Program Files\AMI\DuOS\;C:\Users\Wyatt\AppData\Roaming\npm;C:\cygwin64\bin;C:\Users\Wyatt\AppData\Roaming\Python\Python36\site-packages;C:\Users\Wyatt\AppData\Roaming\Python\Python36\Scripts;C:\Python27;C:\Python27\Scripts;C:\Program Files\R\R-3.4.3\bin;C:\Program Files\svm_light_windows64;C:\Program Files\nircmd-x64;C:\OCaml64\bin;C:\Users\Wyatt\AppData\Local\Programs\Python\Python36\Lib\site-packages;C:\Users\Wyatt\AppData\Local\GitHubDesktop\bin;C:\Users\Wyatt\Anaconda3\pkgs\pytorch-0.3.1-py36_cuda90_cudnn7he774522_2\Lib\site-packages\torch\lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1;C:\U
+10 verbose lifecycle TyTag@1.0.0~dev: CWD: C:\Users\Wyatt\Documents\UIUC\FA18\SS\project\598-Title-Replacer\site\client
+11 silly lifecycle TyTag@1.0.0~dev: Args: [ '/d /s /c', 'webpack-dev-server' ]
+12 verbose stack Error: kill ENOSYS
+12 verbose stack     at exports._errnoException (util.js:1020:11)
+12 verbose stack     at process.kill (internal/process.js:190:13)
+12 verbose stack     at process.listener (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+12 verbose stack     at emitNone (events.js:91:20)
+12 verbose stack     at process.emit (events.js:185:7)
+12 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at Signal.wrap.onsignal (internal/process.js:217:44)
+13 verbose cwd C:\Users\Wyatt\Documents\UIUC\FA18\SS\project\598-Title-Replacer\site\client
+14 error Windows_NT 10.0.17134
+15 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "dev"
+16 error node v6.11.3
+17 error npm  v3.10.10
+18 error code ENOSYS
+19 error errno ENOSYS
+20 error syscall kill
+21 error kill ENOSYS
+22 error If you need help, you may report this error at:
+22 error     <https://github.com/npm/npm/issues>
+23 verbose exit [ 1, true ]
