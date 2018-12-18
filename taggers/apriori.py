@@ -13,7 +13,7 @@ def most_freq_patterns(sequences, id, output_dict, minsup=2, maxlen=5):
     patterns = generate_patterns(sequences, minsup, maxlen)
 
     #collect long enough patterns and their support
-    n = 10
+    n = 8
     top_n = []
     flag = False
     for frequency in range(max_freq ,1,-1):
@@ -26,12 +26,20 @@ def most_freq_patterns(sequences, id, output_dict, minsup=2, maxlen=5):
         if flag:
             break
 
+    top_n_copy = list(top_n)
+    for i in range(len(top_n_copy)):
+        for j in range(len(top_n_copy)):
+            if i == j:
+                continue
+            if top_n_copy[j][1] in top_n_copy[i][1]:
+                if top_n_copy[j] in top_n:
+                    top_n.remove(top_n_copy[j])
+
     #print results in correct format
     output_dict[id] = {}
     p = []
     for pattern in top_n:
-    #     print('[%i, \'%s\']' % (pattern[0], pattern[1]))
-    # print()
+        # print('[%i, \'%s\']' % (pattern[0], pattern[1]))
         p.append(pattern[1])
     output_dict[id]["tags"] = p
     # print(output_dict[id]["tags"])
@@ -134,14 +142,14 @@ if __name__ == "__main__":
         frequency_dict = {}
         max_freq = 0
         raw_text = article_dict[id]["article"]
-
         corpus = raw_text.split(".")
         preprocessed_corpus = []
         for sent in corpus:
             sent = sent.strip()
             words = sent.split(" ")
-            for word in words:
-                if word in stop_words:
+            words_copy = list(words)
+            for word in words_copy:
+                if word.lower() in stop_words:
                     words.remove(word)
             sent = " ".join(words)
             preprocessed_corpus.append(sent)
