@@ -145,7 +145,7 @@ if __name__ == "__main__":
                     words.remove(word)
             sent = " ".join(words)
             preprocessed_corpus.append(sent)
-        most_freq_20_patterns(preprocessed_corpus, id, output_dict, minsup=4, maxlen=4)
+        most_freq_20_patterns(preprocessed_corpus, id, output_dict)
 
     with open("data/tags_apriori.json", "w") as f:
         json.dump(output_dict, f, indent=4)
