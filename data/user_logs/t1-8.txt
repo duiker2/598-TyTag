@@ -1,0 +1,31 @@
+Script started on Tue Dec 18 10:26:48 2018
+sh-4.4$ npm ar  start
+
+> tytag-server@1.0.0 start C:\Users\Wyatt\Documents\UIUC\FA18\SS\project\598-Title-Replacer\site
+> node server.js
+
+Server running on port 5000 1545150415901
+title site accessed 1545150527555
+tag site accessed 1545152269713
+link: 1 1545152275103
+tag site accessed 1545152341689
+share: 1 selection: Social Media 1545152478949
+link: 3 1545152506148
+link: 10 1545152557341
+link: 7 1545152782412
+link: 14 1545152822666
+upvote: 14 1545152861120
+share: 14 selection: SMS 1545152865857
+link: 13 1545152873279
+link: 20 1545153016851
+link: 16 1545153109356
+share: 16 selection: Social Media 1545153593587
+link: 19 1545153599245
+upvote: 19 1545153628579
+link: 23 1545153635150
+link: 17 1545153664295
+
+sh-4.4$ exit
+exit
+
+Script done on Tue Dec 18 11:25:56 2018
