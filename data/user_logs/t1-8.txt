@@ -5,10 +5,8 @@ sh-4.4$ npm ar  start
 > node server.js
 
 Server running on port 5000 1545150415901
-title site accessed 1545150527555
 tag site accessed 1545152269713
 link: 1 1545152275103
-tag site accessed 1545152341689
 share: 1 selection: Social Media 1545152478949
 link: 3 1545152506148
 link: 10 1545152557341
