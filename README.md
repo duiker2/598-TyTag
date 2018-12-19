@@ -4,6 +4,8 @@ Authors:
 * Wyatt Duiker
 * Shekar Brahma
 
+Github - https://github.com/duiker2/598-TyTag
+
 # Data
 
 Data was collected from the front page of reddit.com/r/news on 11/29. It is stored in data/input.json. Participant logs are in data/user_logs named in the format "tn_m" with n being the participant type (1 or 2) and m being the participant number (1-8).
