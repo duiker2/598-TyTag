@@ -4,7 +4,8 @@ Wyatt Duiker
 
 Shekar Brahma
 
-#Data
+# Data
+
 Data was collected from the front page of reddit.com/r/news on 11/29. It is stored in data/input.json. Participant logs are in data/user_logs named in the format "tn_m" with n being the participant type (1 or 2) and m being the participant number (1-8).
 
 # Tag generation
@@ -35,3 +36,9 @@ In /site/client
 npm run dev
 ```
 then go to localhost:8080 in a web browser
+
+# Tools
+A text parser was used to interpret our data. This can be run with:
+```
+python tools/results.py
+```
