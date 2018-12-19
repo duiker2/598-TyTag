@@ -1,8 +1,8 @@
 # 598-TyTag
 
-Wyatt Duiker
-
-Shekar Brahma
+Authors:
+* Wyatt Duiker
+* Shekar Brahma
 
 # Data
 
@@ -13,13 +13,13 @@ To generate tags with TF-IDF run:
 ```
 python taggers/tfidf.py
 ```
-Tags will be in /data/tags_tfidf.json
+* Tags generated can be found in [/data/tags_tfidf.json](https://github.com/duiker2/598-TyTag/blob/master/data/tags_tfidf.json)
 
 To generate tags with Apriori run:
 ```
 python taggers/apriori.py
 ```
-Tags will be in /data/tags_apriori.json
+* Tags generated can be found in [/data/tags_apriori.json](https://github.com/duiker2/598-TyTag/blob/master/data/tags_apriori.json)
 
 # Website and server
 The server reads information on what the user clicks on our site.
