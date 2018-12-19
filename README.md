@@ -42,3 +42,4 @@ A text parser was used to interpret our data. This can be run with:
 ```
 python tools/results.py
 ```
+The output shows the number of articles shared before and after reading for both participant types. It also shows a binary array of which participants shared which article. In the first array, _arr[i][j]_ is 1 if the ith user shared the jth artcile before reading it and 0 otherwise. The second array has the same format for type 2 users.
