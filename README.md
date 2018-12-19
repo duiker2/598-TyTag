@@ -4,7 +4,8 @@ Wyatt Duiker
 
 Shekar Brahma
 
-Data was collected from the front page of r/news on 11/29
+#Data
+Data was collected from the front page of reddit.com/r/news on 11/29. It is stored in data/input.json. Participant logs are in data/user_logs named in the format "tn_m" with n being the participant type (1 or 2) and m being the participant number (1-8).
 
 # Tag generation
 To generate tags with TF-IDF run:
